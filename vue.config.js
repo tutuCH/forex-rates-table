@@ -6,7 +6,7 @@ function resolve (dir) {
 module.exports = {
   assetsDir: 'assets',
   publicPath: './',
-  lintOnSave: true, // 是否开启编译时是否不符合eslint提示
+  lintOnSave: false, // 是否开启编译时是否不符合eslint提示
   devServer: {
     host: '0.0.0.0',
     port: 8000,
@@ -19,6 +19,7 @@ module.exports = {
       }
     }
   },
+  // transpileDependencies: ['vuetify'],
   // 配置别名
   chainWebpack: (config)=>{
     config.resolve.alias
@@ -31,6 +32,32 @@ module.exports = {
         .set('store',resolve('src/store'))
         .set('views',resolve('src/views'))
   },
+  // rules: [
+  //   {
+  //     test: /\.s(c|a)ss$/,
+  //     use: [
+  //       'vue-style-loader',
+  //       'css-loader',
+  //       {
+  //         loader: 'sass-loader',
+  //         // Requires sass-loader@^7.0.0
+  //         options: {
+  //           implementation: require('sass'),
+  //           fiber: require('fibers'),
+  //           indentedSyntax: true // optional
+  //         },
+  //         // Requires sass-loader@^8.0.0
+  //         options: {
+  //           implementation: require('sass'),
+  //           sassOptions: {
+  //             fiber: require('fibers'),
+  //             indentedSyntax: true // optional
+  //           },
+  //         },
+  //       },
+  //     ],
+  //   },
+  // ]
   css: {
     loaderOptions: {
       // pass options to sass-loader
@@ -43,6 +70,7 @@ module.exports = {
                @import "@/assets/css/mixin.scss";
               `
       }
+      
     }
   },
 }

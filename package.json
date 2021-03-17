@@ -14,8 +14,10 @@
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
     "js-cookie": "^2.2.0",
+    "sass-loader": "^7.3.1",
     "vue": "^2.6.6",
     "vue-router": "^3.0.2",
+    "vuetify": "^2.4.7",
     "vuex": "^3.1.0"
   },
   "devDependencies": {
@@ -24,10 +26,12 @@
     "@vue/cli-service": "^3.5.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "deepmerge": "^4.2.2",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0",
+    "fibers": "^5.0.0",
     "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
+    "sass": "^1.32.8",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
@@ -41,7 +45,8 @@
     ],
     "rules": {},
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "babel-eslint",
+      "no-console": "off"
     }
   },
   "postcss": {
