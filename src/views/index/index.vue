@@ -39,7 +39,7 @@
                 v-for="(calData, calIndex) in  Object.entries(calculatedRate)"
                 :key="calIndex"
                 v-bind:class="{ redBorder: isEven(calData[1]) || isHK(calData[0])}"
-                @click="checkEven(data[1])"
+                @click="checkEven(calData[1])"
 
             >
                     <td

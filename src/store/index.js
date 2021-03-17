@@ -1,13 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import user from './modules/user'
+import forexRates from './modules/forexRates'
 import getters from './getters'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
     modules: {
-        user
+        forexRates
     },
     // getters
 })
